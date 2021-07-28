@@ -1,6 +1,6 @@
 package sorting;
 
-public class BubbleSort  {
+public class BubbleSort implements Sort {
     
     public int[] sort(int[] data) {
 
