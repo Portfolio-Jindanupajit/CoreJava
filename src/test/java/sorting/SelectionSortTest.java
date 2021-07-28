@@ -26,8 +26,8 @@ class SelectionSortTest {
     @DisplayName("Sort should work")
     public void sort(int[] expected, int[] data) {
 
-        BubbleSort bubbleSort = new BubbleSort();
-        int[] actual = bubbleSort.sort(data);
+        Sort sort = new SelectionSort();
+        int[] actual = sort.sort(data);
 
         assertArrayEquals(expected, actual ,"Sorter must return sorted array.");
     }

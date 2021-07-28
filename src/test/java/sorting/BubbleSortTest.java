@@ -4,13 +4,14 @@ package sorting;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@DisplayName("All Sort should work")
+@DisplayName("Bubble Sort should work")
 class BubbleSortTest {
 
 
@@ -26,11 +27,11 @@ class BubbleSortTest {
 
     @ParameterizedTest
     @MethodSource("data")
-    @DisplayName("BubbleSort should work")
+    @DisplayName("Sort should work")
     public void sort(int[] expected, int[] data) {
 
-        BubbleSort bubbleSort = new BubbleSort();
-        int[] actual = bubbleSort.sort(data);
+        Sort sort = new BubbleSort();
+        int[] actual = sort.sort(data);
 
         assertArrayEquals(expected, actual ,"Sorter must return sorted array.");
     }
