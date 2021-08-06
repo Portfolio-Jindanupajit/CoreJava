@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@DisplayName("SelectionSort should work")
+@DisplayName("Selection Sort should work")
 class SelectionSortTest {
 
     private static Stream<Arguments> data() {
