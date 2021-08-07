@@ -6,7 +6,7 @@ public class MergeSort implements Sort {
     @Override
     public int[] sort(int[] data) {
 
-        if (data.length < 1) {
+        if (data.length < 2) {
             return data;
         }
 
@@ -33,7 +33,7 @@ public class MergeSort implements Sort {
         int ptrLeft = 0;
         int ptrRight = 0;
 
-        while (i < data.length) {
+        while ((i < data.length) && (ptrLeft < dataLeft.length) && (ptrRight < dataRight.length)) {
             if (dataLeft[ptrLeft] < dataRight[ptrRight]) {
                 data[i++] = dataLeft[ptrLeft++];
             }

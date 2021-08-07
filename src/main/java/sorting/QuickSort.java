@@ -7,7 +7,7 @@ public class QuickSort implements Sort {
     private void quickSort(int[] data, int begin, int end) {
 
         if (begin < end) {
-            System.out.printf("--- begin=%d end=%d ---\n", begin, end);
+
             int pivot = data[end];
             int i;
             int j;
@@ -15,11 +15,8 @@ public class QuickSort implements Sort {
                 if (data[i] > pivot) {
                     Sort.swap(data, i, j);
                 }
-                System.out.printf("begin=%d end=%d i=%d j=%d %s\n", begin, end, i, j,
-                        Arrays.toString(data));
+
             }
-            System.out.printf("*** begin=%d end=%d i=%d j=%d %s\n", begin, end, i, j,
-                    Arrays.toString(data));
             quickSort(data, begin, j);
             quickSort(data, i, end);
         }

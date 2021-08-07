@@ -2,6 +2,7 @@ package sorting;
 
 public class SelectionSort implements Sort {
 
+    @Override
     public int[] sort(int[] data) {
 
         for (int i = 0; i < data.length; i++) {
