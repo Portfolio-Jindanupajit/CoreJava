@@ -26,7 +26,7 @@ public abstract class SortTest {
     @DisplayName("Sort should work")
     public void sort(int[] expected, int[] data) {
 
-        Sort sort = new SelectionSort();
+        Sort sort = getSorter();
         int[] actual = sort.sort(data);
 
         assertArrayEquals(expected, actual ,"Sorter must return sorted array.");
